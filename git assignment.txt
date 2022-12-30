@@ -1,0 +1,249 @@
+
+
+
+bittaluk@INLEN8520055214 MINGW64 ~
+$ mkdir project_dir
+
+bittaluk@INLEN8520055214 MINGW64 ~
+$ cd project_dir
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir
+$ git init
+Initialized empty Git repository in C:/Users/BITTALUK/project_dir/.git/
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html.txt
+
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git commit -m "index.html file created"
+[master (root-commit) 9aabe0b] index.html file created
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        info.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <type>     value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ touch .gitignore
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .gitignore
+        info.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .gitignore
+        modified:   index.html.txt
+        new file:   info.txt.txt
+
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git log
+commit 9aabe0b8babfb40ec566deb5f3499647d90399e3 (HEAD -> master)
+Author: Talukder <bithi.talukder@capgemini.com>
+Date:   Wed Dec 28 16:52:55 2022 +0530
+
+    index.html file created
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git log --oneline
+9aabe0b (HEAD -> master) index.html file created
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add index.html
+fatal: pathspec 'index.html' did not match any files
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git revert
+usage: git revert [--[no-]edit] [-n] [-m <parent-number>] [-s] [-S[<keyid>]] <commit>...
+   or: git revert (--continue | --skip | --abort | --quit)
+
+    --quit                end revert or cherry-pick sequence
+    --continue            resume revert or cherry-pick sequence
+    --abort               cancel revert or cherry-pick sequence
+    --skip                skip current commit and continue
+    --cleanup <mode>      how to strip spaces and #comments from message
+    -n, --no-commit       don't automatically commit
+    -e, --edit            edit the commit message
+    -s, --signoff         add a Signed-off-by trailer
+    -m, --mainline <parent-number>
+                          select mainline parent
+    --rerere-autoupdate   update the index with reused conflict resolution if possible
+    --strategy <strategy>
+                          merge strategy
+    -X, --strategy-option <option>
+                          option for merge strategy
+    -S, --gpg-sign[=<key-id>]
+                          GPG sign commit
+    --reference           use the 'reference' format to refer to commits
+
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git config --global alias.my-add add
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git my-add .
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git commit -m "Index.html updated"
+[master 05acdcd] Index.html updated
+ Committer: Talukder <bithi.talukder@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 3 files changed, 18 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 info.txt.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git reset HEAD ~
+fatal: C:/Users/BITTALUK: 'C:/Users/BITTALUK' is outside repository at 'C:/Users/BITTALUK/project_dir'
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+$ git reset HEAD~
+Unstaged changes after reset:
+M       index.html.txt
+
+bittaluk@INLEN8520055214 MINGW64 ~/project_dir (master)
+
+
+
+Git branching:
+
